@@ -1,9 +1,4 @@
-Maven Demo
-==========
+Java Hello World Demo
+=====================
 
-A very simple maven project demo.
-
-```
-mvn clean install
-```
-
+Run `Hello.java` in your IDE.
