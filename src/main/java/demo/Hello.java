@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Hello {
-    
+
     private static String FFMPEG_PATH = "/usr/local/bin/ffmpeg";
     private static File output = new File("data/demo.mp3");
 
@@ -18,7 +18,8 @@ public class Hello {
                 .setInput("data/demo.wav")
                 .overrideOutputFiles(true)
                 .addOutput(output.getAbsolutePath())
-                .setFormat("mp3")
+                .setFormat("mp2")
+                .setAudioCodec("libmp3lame")
                 .done();
         FFmpegExecutor executor = new FFmpegExecutor(ffmpeg);
         executor.createJob(builder).run();
